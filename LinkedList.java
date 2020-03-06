@@ -7,8 +7,6 @@ public class LinkedList {
 
         int data;
         Node next;
-
-        // Constructor
         Node(int d)
         {
             data = d;
@@ -20,13 +18,11 @@ public class LinkedList {
         Node current = list.head;
         int i = 1;
         boolean flag = false;
-        //Checks whether list is empty
         if(list.head == null) {
             System.out.println("List is empty");
         }
         else {
             while(current != null) {
-                //Compares node to be found with each node present in the list
                 if(current.data == data) {
                     flag = true;
                     break;
@@ -67,13 +63,8 @@ public class LinkedList {
         Node currNode = list.head;
 
         System.out.print("\nLinkedList: ");
-
-        // Traverse through the LinkedList
         while (currNode != null) {
-            // Print the data at current node
             System.out.print(currNode.data + " ");
-
-            // Go to next node
             currNode = currNode.next;
         }
         System.out.println("\n");
@@ -155,18 +146,21 @@ public class LinkedList {
         list = insert(list, 7);
         list = insert(list, 8);
         printList(list);
+        //Delete values by key
         deleteByKey(list, 2);
         printList(list);
         deleteByKey(list, 3);
         printList(list);
         deleteByKey(list, 1);
         printList(list);
+        //Delete value by position
         deleteAtPosition(list, 1);
         printList(list);
         deleteAtPosition(list, 0);
         printList(list);
         deleteAtPosition(list, 0);
         printList(list);
+        //Search node or element
         searchNode(list,3);
         printList(list);
         searchNode(list,5);
